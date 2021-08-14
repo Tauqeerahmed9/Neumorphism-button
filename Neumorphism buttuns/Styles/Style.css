@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(227,237,247);
+    overflow: hidden;
+}
+.button-body{
+    zoom: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px){
+    .button-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+}
+span{
+    display: inline-block;
+    margin: 0 20px;
+    border-radius: 18px;
+    background-color: rgb(227,237,247);
+    height: 50px;
+    min-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+span > i{
+    margin-top: 12px;
+    width: 50px;
+    height: 50px;
+}
+.button.off{
+    color: rgba(49, 69, 106, 0.3);
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),-6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0,);
+    animation: clicked 0.3s ease;
+}
+@keyframes clicked{
+    50%{
+        transform: scale(1.03);
+    }
+}
+.button.on{
+    color: rgb(49, 69, 106);
+    box-shadow: inset 4px 4px 6px -1px rgba(49,69,106,0.2),inset -4px -4px 6px 1px rgba(255,255,255,0.7),-0.5px -0.5px 0 rgba(255,255,255,1),0.5px 0.5px 0 rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0,);
+    animation: clickedIn 0.3s cubic-bezier(0.165,0.84,0.44,1);
+}
+@keyframes clickedIn{
+    50%{
+        transform: scale(0.98);
+    }
+}
